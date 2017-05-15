@@ -11,9 +11,9 @@
       </dd>
 
         <dt>Actor</dt>
-        <dd> <%= Actor.find_by(:id => @character.movie_id).name %></dd>
+          <dd><a href='/actors/<%= @character.actor_id %>'> <%= Actor.find_by(:id => @character.actor_id).name %></a></dd>
 
-        <dt>Name</dt>
+        <dt>Character</dt>
         <dd><%= @character.name %></dd>
 
       </dl>

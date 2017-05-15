@@ -5,6 +5,7 @@ class Character < ApplicationRecord
  validates :actor_id, :presence => true
 
  # - name: no rules
+belongs_to(:movie, :class_name => "Movie", :foreign_key => "movie_id")
 belongs_to(:actor, :class_name => "Actor", :foreign_key => "actor_id")
 
 end
