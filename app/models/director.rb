@@ -4,5 +4,6 @@ class Director < ApplicationRecord
   validates :name, :presence => true, :uniqueness => { :scope => :dob}
   # - dob: no rules
   # - bio: no rules
+ has_many(:movies, :class_name => "Movie", :foreign_key => "director_id")
   # - image_url: no rules
 end
